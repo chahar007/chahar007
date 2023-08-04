@@ -1,0 +1,46 @@
+@import "variables";
+
+@mixin flex-container($align: center, $justify: center, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin font($minimum, $preffered, $maximum, $family: regular, $color: #000) {
+  $minimum: calc($minimum/$primary-font-size-value) + rem;
+  $maximum: calc($maximum/$primary-font-size-value) + rem;
+
+  @if $family==jmedium {
+    font-family: jio-medium;
+  } @else if $family==jbold {
+    font-family: jio-bold;
+  } @else if $family==jlight {
+    font-family: jio-light;
+  } @else if $family==jblack {
+    font-family: jio-black;
+  } @else if $family==jblack {
+    font-family: jio-black;
+  } @else if $family==jregular {
+    font-family: jio-regular;
+  } @else if $family == jio-italic {
+    font-family: jio-light-italic;
+  }
+
+  color: $color;
+  font-size: clamp(#{$minimum}, #{$preffered}, #{$maximum});
+}
+
+@mixin bg-image($path, $size: cover) {
+  background-image: url($basePath + $path);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: $size;
+}
+
+@mixin opacity($value){
+  filter: alpha(opacity= $value*100);  
+  -moz-opacity: $value;  
+  -khtml-opacity: $value;  
+   opacity: $value;
+}
