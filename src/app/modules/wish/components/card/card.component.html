@@ -1,0 +1,46 @@
+<div class="card-template">
+  <div class="sel-img">
+    <img [src]="selectedTemplate?.imageUrl" alt="" />
+    <div class="user-text">
+      <p>{{ selectedTemplate?.title || "" }}</p>
+    </div>
+  </div>
+
+  <div class="templates" *ngIf="step === 1">
+    <div
+      class="template"
+      [class.selected]="template.selected"
+      *ngFor="let template of templates"
+      (click)="templateSelected(template)"
+    >
+      <img [src]="template?.imgUrl" alt="" />
+    </div>
+  </div>
+
+  <div class="user-input" *ngIf="step === 2">
+    <form [formGroup]="formData">
+      <textarea
+        type="text"
+        id="input"
+        class="form-control"
+        rows="3"
+        formControlName="text"
+      ></textarea>
+    </form>
+  </div>
+
+  <div class="handle-ctas d-flex justify-content-center mt-2">
+    <button class="btn btn-info" (click)="changeStep(1)">Previous</button>
+    <button class="btn btn-primary" *ngIf="step == 1" (click)="changeStep(2)">
+      Next
+    </button>
+    <button
+      class="btn btn-primary"
+      [class.disabled]="formData.invalid"
+      *ngIf="step == 2"
+      (click)="submit()"
+    >
+      Submit
+    </button>
+  </div>
+</div>
