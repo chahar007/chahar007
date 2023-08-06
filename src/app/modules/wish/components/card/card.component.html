@@ -1,5 +1,5 @@
 <div class="card-template">
-  <div class="sel-img">
+  <div class="sel-img" id="card-drawred">
     <img [src]="selectedTemplate?.imageUrl" alt="" />
     <div class="user-text">
       <p>{{ selectedTemplate?.title || "" }}</p>
@@ -29,18 +29,18 @@
     </form>
   </div>
 
-  <div class="handle-ctas d-flex justify-content-center mt-2">
-    <button class="btn btn-info" (click)="changeStep(1)">Previous</button>
-    <button class="btn btn-primary" *ngIf="step == 1" (click)="changeStep(2)">
+  <div class="handle-ctas d-flex justify-content-center mt-4">
+    <button class="btn prev-btn" (click)="changeStep(1)">Previous</button>
+    <button class="btn btn-download" *ngIf="step == 1" (click)="changeStep(2)">
       Next
     </button>
     <button
-      class="btn btn-primary"
+      class="btn btn-download"
       [class.disabled]="formData.invalid"
       *ngIf="step == 2"
       (click)="submit()"
     >
-      Submit
+      Download
     </button>
   </div>
 </div>

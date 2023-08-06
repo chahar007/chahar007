@@ -3,14 +3,14 @@ export const HOME_SLIDER = [
     id: 1,
     title: 'First Image',
     desc: 'Description',
-    imgUrl: 'assets/images/slider/s1.jpeg',
+    imgUrl: 'assets/images/slider/s1.png',
     selected: false,
   },
   {
     id: 2,
     title: 'First Image',
     desc: 'Description',
-    imgUrl: 'assets/images/slider/s2.jpeg',
+    imgUrl: 'assets/images/slider/s2.png',
     selected: false,
   },
   {
@@ -18,7 +18,7 @@ export const HOME_SLIDER = [
     title: 'First Image',
     desc: 'Description',
     selected: false,
-    imgUrl: 'assets/images/slider/s3.jpeg',
+    imgUrl: 'assets/images/slider/s3.png',
   },
 ];
 

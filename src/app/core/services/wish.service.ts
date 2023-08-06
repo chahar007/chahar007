@@ -80,7 +80,7 @@ export class WishService {
 
       const blob = new Blob([file], { type: 'image/png' });
       const url = window.URL.createObjectURL(blob);
-      // window.open(url);
+      window.open(url);
       const link = document.createElement('a');
       link.href = url;
       link.download = 'Greeting';

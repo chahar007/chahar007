@@ -1,4 +1,29 @@
 .navbar {
     z-index: 9;
     height: 4rem;
+    background-color: #1ABC9C !important;
+    
+    .navbar-brand {
+        font-family: sans-serif;
+    }
+
+    #offcanvasNavbar {
+        width: 60%;
+        background-color: #e4eeea;
+    }
+
+    .navbar-toggler {
+        background: white;
+        outline: none;
+        border: none;
+        &:focus {
+            outline: none !important;
+        }
+    } 
 }
+
+
+
+// 
+//background: #0e387a;
+//background: #551fbd;
