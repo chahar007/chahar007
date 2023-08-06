@@ -75,7 +75,12 @@ export const BLOGS = [
   },
   {
     id: 'indian-independence-day',
-    title: 'Indian Independence Day',
+    title: 'Rakha Bandhan',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+  {
+    id: 'indian-independence-day',
+    title: 'Deepawali',
     desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
   },
   {
@@ -85,22 +90,12 @@ export const BLOGS = [
   },
   {
     id: 'indian-independence-day',
-    title: 'Indian Independence Day',
+    title: 'Rakha Bandhan',
     desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
   },
   {
     id: 'indian-independence-day',
-    title: 'Indian Independence Day',
-    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
-  },
-  {
-    id: 'indian-independence-day',
-    title: 'Indian Independence Day',
-    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
-  },
-  {
-    id: 'indian-independence-day',
-    title: 'Indian Independence Day',
+    title: 'Deepawali',
     desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
   },
 ];
