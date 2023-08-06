@@ -10,14 +10,14 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   navigate(type) {
-    switch (type) {
-      case 'home':
-        this.router.navigate(['/']);
-        break;
+    this.router.navigate([type]);
+    // switch (type) {
+    //   case 'home':
+    //     break;
 
-      case 'create':
-        this.router.navigate(['/create-wishes/']);
-        break;
-    }
+    //   case 'create':
+    //     this.router.navigate(['/create-wishes/']);
+    //     break;
+    // }
   }
 }

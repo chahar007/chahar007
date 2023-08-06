@@ -22,6 +22,25 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/wish/wish.module').then((w) => w.WishModule),
   },
+  {
+    path: 'about-us',
+    loadChildren: () =>
+      import('./modules/about-us/about-us.module').then((w) => w.AboutUsModule),
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () =>
+      import('./modules/contact-us/contact-us.module').then(
+        (w) => w.ContactUsModule
+      ),
+  },
+  {
+    path: 'privacy-policy',
+    loadChildren: () =>
+      import('./modules/privacy-policy/privacy-policy.module').then(
+        (w) => w.PrivacyPolicyModule
+      ),
+  },
 ];
 
 @NgModule({

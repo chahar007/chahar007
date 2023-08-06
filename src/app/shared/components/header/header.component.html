@@ -35,23 +35,25 @@
             <a
               class="nav-link active"
               aria-current="page"
-              (click)="navigate('home')"
+              (click)="navigate('/')"
               >Home</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="navigate('create')">Create Wishes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="navigate('create')">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="navigate('create')"
-              >Privacy & Policy</a
+            <a class="nav-link" (click)="navigate('create-wishes')"
+              >Create Wishes</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="navigate('create')">Contact Us</a>
+            <a class="nav-link" (click)="navigate('about-us')">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigate('contact-us')">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="navigate('privacy-policy')"
+              >Privacy & Policy</a
+            >
           </li>
         </ul>
         <!-- <form class="d-flex mt-3" role="search">
