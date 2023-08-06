@@ -2,7 +2,7 @@
   <div class="listing-container">
     <div class="listing-item" *ngFor="let list of blogList">
       <h3>{{ list?.title }}</h3>
-      <p>{{ list?.desc }}.</p>
+      <p>{{ list?.desc }}..</p>
       <a (click)="navigate(list.id)">Read More</a>
     </div>
   </div>
