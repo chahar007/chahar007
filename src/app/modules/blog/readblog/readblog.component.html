@@ -1,0 +1,15 @@
+<div class="read-blog">
+  <div class="container">
+    <div class="content" *ngIf="content">
+      <h2>{{ content?.title }}</h2>
+      <p>
+        {{ content?.desc }}
+      </p>
+
+      <div class="keypoints" *ngFor="let item of content.keyPoints">
+        <h4 *ngIf="item?.title">{{ item?.title }}</h4>
+        <p *ngIf="item?.desc">{{ item?.desc }}</p>
+      </div>
+    </div>
+  </div>
+</div>

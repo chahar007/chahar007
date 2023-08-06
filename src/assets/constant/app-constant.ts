@@ -66,3 +66,36 @@ export const CARD_TEMPLATES = [
     imgUrl: 'assets/images/card/c3.jpeg',
   },
 ];
+
+export const BLOGS = [
+  {
+    id: 'indian-independence-day',
+    title: 'Indian Independence Day',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+  {
+    id: 'indian-independence-day',
+    title: 'Rakha Bandhan',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+  {
+    id: 'indian-independence-day',
+    title: 'Deepawali',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+  {
+    id: 'indian-independence-day',
+    title: 'Indian Independence Day',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+  {
+    id: 'indian-independence-day',
+    title: 'Rakha Bandhan',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+  {
+    id: 'indian-independence-day',
+    title: 'Deepawali',
+    desc: 'August 15, 1947, after years of struggle, India finally gained independence from British rule. ',
+  },
+];

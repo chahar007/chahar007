@@ -41,6 +41,11 @@ const routes: Routes = [
         (w) => w.PrivacyPolicyModule
       ),
   },
+  {
+    path: 'blogs',
+    loadChildren: () =>
+      import('./modules/blog/blog.module').then((w) => w.BlogModule),
+  },
 ];
 
 @NgModule({
