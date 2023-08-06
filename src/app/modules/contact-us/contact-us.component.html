@@ -1,1 +1,14 @@
-<p>contact-us works!</p>
+<div class="contact-us-page">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form action="javascript:void(0);">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" (click)="submit()">Send Us</button>
+    </form>
+    <div class="toaster" id="toaster" [class.show]="showToaster">
+      Thanks for contact us we will reach you soon!!!
+    </div>
+  </div>
+</div>
