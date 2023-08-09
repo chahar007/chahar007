@@ -1,0 +1,25 @@
+<div class="flame-game">
+  <div class="header">
+    <h1>FLAME Game</h1>
+  </div>
+  <div class="container">
+    <form [formGroup]="nameForm"></form>
+    <div class="input-container">
+      <input
+        type="text"
+        id="name1"
+        placeholder="Enter Name 1"
+        formControlName="name1"
+      />
+      <input
+        type="text"
+        id="name2"
+        placeholder="Enter Name 2"
+        formControlName="name2"
+      />
+      <button id="calculate-btn" (click)="calculateFlame()">
+        Calculate FLAME
+      </button>
+    </div>
+  </div>
+</div>

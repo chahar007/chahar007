@@ -10,7 +10,7 @@ export const HOME_SLIDER = [
     id: 2,
     title: 'First Image',
     desc: 'Description',
-    imgUrl: 'assets/images/slider/s2.png',
+    imgUrl: 'assets/images/slider/s2.jpeg',
     selected: false,
   },
   {
@@ -18,7 +18,7 @@ export const HOME_SLIDER = [
     title: 'First Image',
     desc: 'Description',
     selected: false,
-    imgUrl: 'assets/images/slider/s3.png',
+    imgUrl: 'assets/images/slider/s3.jpeg',
   },
 ];
 
@@ -48,14 +48,14 @@ export const CARD_TEMPLATES = [
     id: 4,
     title: 'First Image',
     desc: 'Description',
-    imgUrl: 'assets/images/card/c1.jpeg',
+    imgUrl: 'assets/images/card/c4.jpg',
     selected: false,
   },
   {
     id: 5,
     title: 'First Image',
     desc: 'Description',
-    imgUrl: 'assets/images/card/c2.jpeg',
+    imgUrl: 'assets/images/card/c5.jpg',
     selected: false,
   },
   {
@@ -63,7 +63,7 @@ export const CARD_TEMPLATES = [
     title: 'First Image',
     desc: 'Description',
     selected: false,
-    imgUrl: 'assets/images/card/c3.jpeg',
+    imgUrl: 'assets/images/card/c6.jpg',
   },
 ];
 
