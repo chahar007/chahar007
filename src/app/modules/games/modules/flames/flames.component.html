@@ -1,25 +1,64 @@
 <div class="flame-game">
   <div class="header">
-    <h1>FLAME Game</h1>
-  </div>
-  <div class="container">
-    <form [formGroup]="nameForm"></form>
-    <div class="input-container">
-      <input
-        type="text"
-        id="name1"
-        placeholder="Enter Name 1"
-        formControlName="name1"
-      />
-      <input
-        type="text"
-        id="name2"
-        placeholder="Enter Name 2"
-        formControlName="name2"
-      />
-      <button id="calculate-btn" (click)="calculateFlame()">
-        Calculate FLAME
+    <!-- <h1>FLAME Game</h1> -->
+    <div class="button-container">
+      <button class="flame-button">
+        <span>F</span>
+        <span>L</span>
+        <span>A</span>
+        <span>M</span>
+        <span>E</span>
+        <span>S</span>
       </button>
+    </div>
+  </div>
+  <div class="container form">
+    <form [formGroup]="nameForm">
+      <div class="input-container">
+        <input
+          type="text"
+          id="name1"
+          placeholder="Enter Name 1"
+          formControlName="name1"
+        />
+        <div class="swap-icon">
+          <img src="assets/images/icons/swap.png" alt="" />
+        </div>
+        <input
+          type="text"
+          id="name2"
+          placeholder="Enter Name 2"
+          formControlName="name2"
+        />
+        <button
+          id="calculate-btn"
+          class="mt-3"
+          (click)="calculateFlame()"
+          [class.disabled]="nameForm.invalid"
+        >
+          Check
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="result-popup" *ngIf="showResult">
+  <div class="result-data">
+    <div class="row">
+      <div class="col-md-12 cancel">
+        <img
+          src="assets/images/icons/cancel.png"
+          alt="cancel"
+          (click)="close()"
+        />
+      </div>
+      <div class="col-md-12 fimg">
+        <img src="assets/images/flames/{{ flameIndex }}.png" alt="" />
+      </div>
+      <div class="col-md-12 result">
+        <p>{{ result }}</p>
+      </div>
     </div>
   </div>
 </div>

@@ -8,9 +8,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class FlamesComponent implements OnInit {
   nameForm: any;
+  showResult: boolean = false;
+  result = 'Friendship';
+  flamesArray = [
+    'Friendship',
+    'Love',
+    'Affection',
+    'Marriage',
+    'Enemy',
+    'Sibling',
+  ];
+  flameIndex = 0;
   constructor(private fb: FormBuilder) {}
   ngOnInit(): void {
-    let flames = this.generateFlames('victor', 'anushka');
     this.initForm();
   }
 
@@ -22,9 +32,24 @@ export class FlamesComponent implements OnInit {
   }
 
   calculateFlame() {
-    if (this.nameForm.invalid) return;
+    if (this.nameForm.invalid) {
+      return;
+    }
 
-    this.generateFlames(this.nameForm.value.name1, this.nameForm.value.name2);
+    this.result = this.generateFlames(
+      this.nameForm.value.name1,
+      this.nameForm.value.name2
+    );
+    this.flameIndex = this.flamesArray.findIndex((x) => x == this.result);
+
+    if (this.result) {
+      this.showResult = true;
+    }
+  }
+
+  close() {
+    this.showResult = false;
+    this.result = '';
   }
 
   generateFlames(name1, name2) {
@@ -56,14 +81,7 @@ export class FlamesComponent implements OnInit {
       })
       .map(
         (result) =>
-          [
-            'Friendship',
-            'Love',
-            'Affection',
-            'Marriage',
-            'Enemy',
-            'Sibling',
-          ].filter((flame) =>
+          this.flamesArray.filter((flame) =>
             flame.toLowerCase().startsWith(result.toLowerCase())
           )[0] // present result in readable form
       )[0];
