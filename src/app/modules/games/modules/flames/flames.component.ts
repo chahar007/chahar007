@@ -18,6 +18,7 @@ export class FlamesComponent implements OnInit {
     'Enemy',
     'Sibling',
   ];
+  randomNumber = 0;
   flameIndex = 0;
   constructor(private fb: FormBuilder) {}
   ngOnInit(): void {
@@ -29,6 +30,15 @@ export class FlamesComponent implements OnInit {
       name1: ['', Validators.required],
       name2: ['', Validators.required],
     });
+    this.generateRandomNumber();
+  }
+  generateRandomNumber() {
+    setTimeout(() => {
+      this.randomNumber + 1 == 5
+        ? (this.randomNumber = 0)
+        : ++this.randomNumber;
+      this.generateRandomNumber();
+    }, 2000);
   }
 
   calculateFlame() {

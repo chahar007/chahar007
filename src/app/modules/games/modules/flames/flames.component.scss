@@ -150,7 +150,7 @@
   }
 
   .swap-icon {
-    height: 2rem;
+    height: 2.5rem;
     margin: 0.4rem 0 0.7rem;
   }
 
@@ -185,7 +185,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  @include flex-container;
+  @include flex-container(center, center, column);
   .result-data {
     @include flex-container;
     background-color: white;
