@@ -216,7 +216,17 @@
       }
     }
 
-
+  }
+  .ctas {
+    width: 100%;
+    margin: 0 auto;
+    @include flex-container;
+    margin-top: 1rem;
+    .share-cta {
+      width: 60%;
+      color:white;
+      background-color: #551fbd;
+    }
   }
 
 }

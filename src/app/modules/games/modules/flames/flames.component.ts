@@ -19,7 +19,7 @@ export class FlamesComponent implements OnInit {
     'Sibling',
   ];
   randomNumber = 0;
-  flameIndex = 0;
+  flameIndex = 4;
   constructor(private fb: FormBuilder) {}
   ngOnInit(): void {
     this.initForm();
@@ -60,6 +60,15 @@ export class FlamesComponent implements OnInit {
   close() {
     this.showResult = false;
     this.result = '';
+  }
+
+  share() {
+    let data = {
+      title: 'Best Wishes',
+      text: 'Play falmes with your friend & check your bond!',
+      url: location.href,
+    };
+    navigator.share(data);
   }
 
   generateFlames(name1, name2) {
