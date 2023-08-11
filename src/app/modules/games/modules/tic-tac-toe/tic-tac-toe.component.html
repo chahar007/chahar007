@@ -1,1 +1,36 @@
-<p>tic-tac-toe works!</p>
+<div class="ttt-component">
+  <div class="game-header">
+    <button class="flame-button">
+      <span>Tic</span>
+      <span>Tac</span>
+      <span>Toe</span>
+    </button>
+  </div>
+  <!-- <div class="player-header">
+    <h1>Current Player: {{ player }}</h1>
+  </div> -->
+
+  <div class="box-container">
+    <div
+      class="box"
+      *ngFor="let value of squares; let i = index"
+      (click)="makeMove(i)"
+      [class.gameEnd]="winner"
+    >
+      <button class="btn empty-cell" *ngIf="!value">
+        {{ value }}
+      </button>
+      <button class="btn x-cell" *ngIf="value == 'X'">{{ value }}</button>
+      <button class="btn y-cell" *ngIf="value == 'O'">
+        {{ value }}
+      </button>
+    </div>
+  </div>
+
+  <div class="result" *ngIf="winner">
+    <h2>Player {{ winner }} won the game!</h2>
+  </div>
+  <div class="start-game">
+    <button class="btn btn-m" (click)="newGame()">Start New Game</button>
+  </div>
+</div>

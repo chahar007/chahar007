@@ -85,16 +85,6 @@ export class WishService {
       link.href = url;
       link.download = 'Greeting';
       link.click();
-
-      // const base64Canvas = canvasEl
-      //   .toDataURL('image/jpeg')
-      //   .split(';base64,')[1];
-
-      // let sharePayload = {
-      //   text: 'Come join us and spread love on the day',
-      //   url: base64Canvas,
-      // };
-      // navigator.share(sharePayload);
     };
     return createMemeObs.asObservable();
   }
