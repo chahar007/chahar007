@@ -1,4 +1,4 @@
-@import 'mixins';
+@import "mixins";
 
 .ttt-component {
   width: 100%;
@@ -40,9 +40,17 @@
       span:nth-child(3) {
         animation-name: flameAnimation3;
       }
-      
     }
   }
+
+  // @keyframes shine
+  // 0%
+  //   background-position: 0
+  // 60%
+  //   background-position: 180px
+  // 100%
+  //   background-position: 180px
+
   @keyframes flameAnimation1 {
     0%,
     100% {
@@ -78,12 +86,11 @@
     color: black;
   }
 
-
   .box-container {
     width: 60%;
     @include flex-container;
     flex-wrap: wrap;
-    gap:1.5%;
+    gap: 1.5%;
     .box {
       width: 30%;
       text-align: center;
@@ -96,24 +103,23 @@
         margin-top: 0.5rem;
         font-size: 2rem !important;
         outline: none;
-        border:1px solid $header-color;
+        border: 1px solid $header-color;
         border-radius: 0.7rem;
       }
 
       .x-cell {
         background-color: green;
-        border:1px solid green;
+        border: 1px solid green;
         color: white;
       }
 
       .y-cell {
         background-color: rgb(16, 144, 203);
-        border:1px solid rgb(16, 144, 203);
+        border: 1px solid rgb(16, 144, 203);
         color: white;
       }
     }
   }
-
 
   .result {
     margin-top: 1rem;
@@ -125,9 +131,7 @@
     margin-top: 1rem;
     button {
       background-color: $primary-color;
-      color:white;
+      color: white;
     }
   }
-
 }
-
