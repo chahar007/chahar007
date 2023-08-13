@@ -10,11 +10,9 @@ import * as htmlToImage from 'html-to-image';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit, OnDestroy {
-  selectedTemplate: any = {
-    imageUrl: 'assets/images/card/c1.jpeg',
-    title: 'Dummy text to check the response of the user',
-  };
+  selectedTemplate: any = {};
   templates: any = CARD_TEMPLATES;
+  // tempArray = [];
   step = 1;
   userText = '';
   formData: FormGroup;
@@ -22,6 +20,9 @@ export class CardComponent implements OnInit, OnDestroy {
   constructor(private wishService: WishService, private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    this.selectedTemplate = this.templates[0];
+    console.log('selected templates', this.selectedTemplate);
+
     this.formData = this.fb.group({
       text: [this.selectedTemplate.value, Validators.required],
     });
@@ -30,7 +31,7 @@ export class CardComponent implements OnInit, OnDestroy {
   }
 
   templateSelected(template) {
-    this.selectedTemplate.imageUrl = template.imgUrl;
+    this.selectedTemplate = template;
     this.templates.map((temp) => {
       if (temp.id == template.id) {
         temp.selected = true;

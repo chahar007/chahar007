@@ -1,8 +1,10 @@
 <div class="card-template">
   <div class="sel-img" id="card-drawred">
-    <img [src]="selectedTemplate?.imageUrl" alt="" />
+    <img [src]="selectedTemplate?.imgUrl" alt="game" />
     <div class="user-text">
-      <p>{{ selectedTemplate?.title || "" }}</p>
+      <p [style.color]="selectedTemplate?.color">
+        {{ selectedTemplate?.desc || "" }}
+      </p>
     </div>
   </div>
 
@@ -13,7 +15,7 @@
       *ngFor="let template of templates"
       (click)="templateSelected(template)"
     >
-      <img [src]="template?.imgUrl" alt="" />
+      <img [src]="template?.imgUrl" alt="game" />
     </div>
   </div>
 

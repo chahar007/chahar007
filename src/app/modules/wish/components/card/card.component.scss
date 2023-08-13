@@ -1,84 +1,86 @@
-@import 'mixins';
-
+@import "mixins";
 
 .card-template {
-    padding: 1rem;
-    // width: 100%;
-    // height: 100%;
-    @include flex-container(center, space-around, column);
-    .sel-img {
-        position: relative;    
-        border-radius: 1rem;
-        width: calc(100vw - 2rem);
-        height: calc(80vw - 2rem);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: fixed;
-        &.ios {
-            -o-background-size: cover;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 1rem;
-        }
-        .user-text {
-            position: absolute;
-            bottom:1rem;
-            p {
-                color:white;
-                padding: 0 1rem;
-                text-align: center;
-                word-break: break-all;
-            }
-        }
+  padding: 1rem;
+  // width: 100%;
+  // height: 100%;
+  @include flex-container(center, space-around, column);
+  .sel-img {
+    position: relative;
+    border-radius: 1rem;
+    width: calc(100vw - 2rem);
+    height: calc(90vw - 2rem);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    &.ios {
+      -o-background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
     }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+    .user-text {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      text-align: center;
+      p {
+        padding: 0 1rem;
+        text-align: center;
+        word-break: break-all;
+        font-weight: bold;
+        padding: 0.5rem;
+      }
+    }
+  }
 
-    .user-input {
-        margin-top: 1rem;
+  .user-input {
+    margin-top: 3rem;
+    width: 100%;
+    @include flex-container();
+    form {
+      width: 100%;
+    }
+  }
+
+  .templates {
+    padding-top: 2rem;
+    @include flex-container(center, space-between);
+    overflow-x: auto;
+    .template {
+      width: 33%;
+      min-width: 33%;
+      padding: 0.5rem 1rem 0 0;
+      img {
         width: 100%;
-        @include flex-container();
-        form {
-            width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+      }
+      &.selected {
+        img {
+          border: 4px solid orange;
         }
+      }
+    }
+  }
+
+  .handle-ctas {
+    button {
+      margin: 0 0.5rem;
     }
 
-
-    .templates {
-        padding-top:1rem; 
-        @include flex-container(center, space-between);
-        flex-flow: wrap;
-        .template {
-            width: 32%;
-            padding:0.5rem 1rem 0 0 ;
-            img {
-                width: 100%;
-                height: 100%;
-                border-radius: 1rem;
-            }
-            &.selected {
-                img {
-                    border:4px solid orange;
-                }
-            }
-        }
+    .prev-btn {
+      background: #3691b2;
+      color: white;
     }
 
-    .handle-ctas {
-        button {
-            margin: 0 0.5rem;
-        }
-
-        .prev-btn {
-            background: #3691b2;
-            color: white;
-        }
-        
-        .btn-download {
-            background: #551fbd;
-            color: white;
-        }
+    .btn-download {
+      background: #551fbd;
+      color: white;
     }
+  }
 }

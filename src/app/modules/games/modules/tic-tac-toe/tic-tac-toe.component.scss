@@ -28,7 +28,7 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: both;
         // width: 10vw;
-        margin-right: 1rem;
+        // margin-right: 1rem;
       }
 
       span:nth-child(1) {
@@ -51,35 +51,35 @@
   // 100%
   //   background-position: 180px
 
-  @keyframes flameAnimation1 {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
+  // @keyframes flameAnimation1 {
+  //   0%,
+  //   100% {
+  //     transform: translateY(0);
+  //   }
+  //   50% {
+  //     transform: translateY(-10px);
+  //   }
+  // }
 
-  @keyframes flameAnimation2 {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-  }
+  // @keyframes flameAnimation2 {
+  //   0%,
+  //   100% {
+  //     transform: translateY(0);
+  //   }
+  //   50% {
+  //     transform: translateY(-20px);
+  //   }
+  // }
 
-  @keyframes flameAnimation3 {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-15px);
-    }
-  }
+  // @keyframes flameAnimation3 {
+  //   0%,
+  //   100% {
+  //     transform: translateY(0);
+  //   }
+  //   50% {
+  //     transform: translateY(-15px);
+  //   }
+  // }
 
   .player-header {
     text-align: center;
@@ -88,6 +88,7 @@
 
   .box-container {
     width: 60%;
+
     @include flex-container;
     flex-wrap: wrap;
     gap: 1.5%;
@@ -122,16 +123,42 @@
   }
 
   .result {
-    margin-top: 1rem;
+    margin-top: 2rem;
     color: green;
     font-weight: bold;
   }
 
   .start-game {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    @include flex-container();
     button {
       background-color: $primary-color;
       color: white;
+      width: 60%;
     }
+  }
+}
+
+@media only screen and (min-width: 301px) {
+  .box-container {
+    width: 250px !important;
+  }
+  .start-game {
+    button {
+      width: 50% !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .box-container {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  .box-container {
+    width: 85% !important;
   }
 }
