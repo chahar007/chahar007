@@ -51,7 +51,7 @@ export class CardComponent implements OnInit, OnDestroy {
       .get('text')
       .valueChanges.pipe(distinctUntilChanged())
       .subscribe((res) => {
-        this.selectedTemplate.title = res.trim();
+        this.selectedTemplate.desc = res.trim();
         this.formData.get('text').setValue(res);
       });
   }
