@@ -37,7 +37,7 @@ export class WishService {
     //step 2: get image
     const bgImage: HTMLImageElement = this.renderer.createElement('img');
     bgImage.crossOrigin = 'anonymous';
-    bgImage.src = payload.imageUrl;
+    bgImage.src = payload.imgUrl;
     bgImage.onerror = () => {
       //handle template image load error
       createMemeObs.error({
@@ -68,8 +68,8 @@ export class WishService {
 
       //add bottom text:
       if (payload.title) {
-        ctx.strokeText(payload.title, width / 2, height - 48, width - 40);
-        ctx.fillText(payload.title, width / 2, height - 48, width - 40);
+        ctx.strokeText(payload.desc, width / 2, height - 48, width - 40);
+        ctx.fillText(payload.desc, width / 2, height - 48, width - 40);
       }
 
       //step4: convert to image

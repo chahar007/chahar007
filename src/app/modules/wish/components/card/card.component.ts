@@ -21,17 +21,19 @@ export class CardComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.selectedTemplate = this.templates[0];
-    console.log('selected templates', this.selectedTemplate);
 
     this.formData = this.fb.group({
       text: [this.selectedTemplate.value, Validators.required],
     });
+    this.formData.get('text').setValue(this.selectedTemplate.desc);
+
     this.os = this.getOS();
     this.userInputSubs();
   }
 
   templateSelected(template) {
     this.selectedTemplate = template;
+    this.formData.get('text').setValue(template.desc);
     this.templates.map((temp) => {
       if (temp.id == template.id) {
         temp.selected = true;
